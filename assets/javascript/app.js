@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    function firstScreen () {
+    function firstScreen() {
         startScreen = "<p class='text-center main-button-container'><a class='btn btn-primary btn-lg btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
         $(".mainPart").html(startScreen);
 
@@ -106,8 +106,9 @@ var gameHTML;
 var counter = 30;
 var questionArray = ["Who is the greatest basketball player of all time?", "What is the capital of Korea?", "What is the most sold item at Wal-Mart?", "What is blockchain?", "What is the name of the instructor for UCLA Coding Bootcamp?"];
 var answerArray = [["Kobe Bryant", "Michael Jordan", "Shaq", "LeBron James"], ["Seoul", "Tokyo", "Beijing", "Ho Chi Minh City"], ["Condoms", "Bananas", "Toilet Paper", "Gum"],["a digital ledger in which transactions made in bitcoin or another cryptocurrency are recorded chronologically and publicly.", "a form of new computer programming language", "a famous movie in the 60's", "a type of chain used for specialized construction"], ["Elton", "Paige", "Clark", "DJ Khaled"]];
-var imageArray = ["<img class='center-block img-right' src='assets/images/nbalogo.jpeg'>", "<img class='center-block img-right' src='assets/images/blockchain.jpg'>", "<img class='center-block img-right' src='assets/images/seoulskyline.jpg'>"];
-var correctAnswers = [];
+var imageArray = ["<img class='center-block img-right' src='assets/images/nbalogo.jpeg'>", "<img class='center-block img-right' src='assets/images/seoulskyline.jpg'>", "<img class='center-block img-right' src='assets/images/walmartlogo.jpeg'>", "<img class='center-block img-right' src='assets/images/blockchain.jpg'>", "<img class='center-block img-right' src='assets/images/uclabruins.jpg'>"];
+var correctAnswers = ["B. Michael Jordan", "A. Seoul", "B. Bananas", "A. a digital ledger in which transactions made in bitcoin or another cryptocurrency are recorded chronologically and publicly.", "C. Clark"];
+var questionCounter = 0;
 var selectedAnswer;
 var theClock;
 var correctPoint = 0;
