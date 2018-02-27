@@ -106,7 +106,7 @@ var gameHTML;
 var counter = 30;
 var questionArray = ["Who is the greatest basketball player of all time?", "What is the capital of Korea?", "What is the most sold item at Wal-Mart?", "What is blockchain?", "What is the name of the instructor for UCLA Coding Bootcamp?"];
 var answerArray = [["Kobe Bryant", "Michael Jordan", "Shaq", "LeBron James"], ["Seoul", "Tokyo", "Beijing", "Ho Chi Minh City"], ["Condoms", "Bananas", "Toilet Paper", "Gum"],["a digital ledger in which transactions made in bitcoin or another cryptocurrency are recorded chronologically and publicly.", "a form of new computer programming language", "a famous movie in the 60's", "a type of chain used for specialized construction"], ["Elton", "Paige", "Clark", "DJ Khaled"]];
-var imageArray = [];
+var imageArray = ["<img class='center-block img-right' src='images/australia.png'>",];
 var correctAnswers = [];
 var selectedAnswer;
 var theClock;
