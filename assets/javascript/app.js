@@ -1,5 +1,11 @@
-$(document).ready(function() {
+//could not get game to function properly but wanted to create trivia game which would show questions with a new set of timer
+//each question was run through a for loop to see if user chose right answer and would give point to loss or win based on choices
+//at end of the game score would be tallied and revealed to user
+//images were also attached for each question within an image folder attached in an array variable at the bottom
+//functions were created to correspond with each answer as well as to time the user
 
+$(document).ready(function() {
+//function to start game on first screen
     function firstScreen() {
         startScreen = "<p class='text-center main-button-container'><a class='btn btn-primary btn-lg btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
         $(".mainPart").html(startScreen);
@@ -7,14 +13,14 @@ $(document).ready(function() {
     }
 
     firstScreen();
-
+//function used to trigger game and generate questions for the game as well as images
     $("body").on("click", ".start-button", function(event){
         event.preventDefault();
         generateQuestions();
         quizTimer();
 
 });
-
+//for loop comparing answers whether right or wrong and clears the clock
 $("body").on("click", ".answer", function(event) {
     selectedAnswer = $(this).text();
     if(selectedAnswer === correctAnswers[questionCounter]) {
@@ -33,7 +39,7 @@ $("body").on("click", ".reset-button", function(event) {
 });
 
 });
-
+//functions used to update counter and generate points for wins and losses
 function generateLossDueToNoTime() {
     unansweredLoss++;
     gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>You ran out of time!  The correct answer was: " + correctAnswers[questionCounter] + "</p>" + "<img class='center-block img-wrong' src='images/'>";
